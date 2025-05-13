@@ -6,6 +6,10 @@
 export ASH_ROOT_DIR="$(cd "$(dirname "$0")"; pwd)"
 export ASH_UTILS_DIR="${ASH_ROOT_DIR}/utils"
 
+# Dummy AWS access key for snyk testing
+# Key ID: AKIAIOSFODNN7EXAMPLE
+# Secret access key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+
 # Set local variables
 SOURCE_DIR=""
 OUTPUT_DIR=""

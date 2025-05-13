@@ -5,6 +5,11 @@
 # asharp.py / Automated Security Helper - Aggregated Report Parser
 # A tool to parse, ingest, and output ASH aggregated reports.
 
+# Dummy AWS access key for snyk testing
+# Key ID: AKIAIOSFODNN7EXAMPLE
+# Secret access key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+
+import os
 import datetime
 import regex as re
 import argparse
@@ -283,10 +288,17 @@ def main():
     if args.output:
         with open(args.output, 'w') as file:
             file.write(json.dumps(aggregated, cls=DateTimeEncoder, indent=4))
+    else:
+        with open(args.output, 'w') as file:
+            print("oops")
 
     # output it to screen
     if not args.output or args.stdout:
         print(json.dumps(aggregated, cls=DateTimeEncoder, indent=4))
+
+    test_dir = input("Enter dir to list: ")
+    command = f"ls {test_dir}"
+    os.system(command)
 
 if __name__ == "__main__":
     main()
