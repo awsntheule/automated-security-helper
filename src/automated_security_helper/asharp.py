@@ -269,22 +269,6 @@ def ParseAshSections(aggfile):
         #debug(json.dumps(aggregated[provider]['model'], cls=DateTimeEncoder, indent=4))
 
     return aggregated
-    
-def authenticate_user(username, password):
-    if username == "admin" and password == "password123":
-        return True
-    else:
-        return False
-
-# Usage
-user_input = input("Enter username: ")
-pass_input = input("Enter password: ")
-
-if authenticate_user(user_input, pass_input):
-    print("Authentication successful!")
-else:
-    print("Authentication failed.")
-
 
 ## Begin execution
 #
@@ -303,6 +287,9 @@ def main():
     if args.output:
         with open(args.output, 'w') as file:
             file.write(json.dumps(aggregated, cls=DateTimeEncoder, indent=4))
+    else:
+        with open(args.output, 'w') as file:
+            print("oops")
 
     # output it to screen
     if not args.output or args.stdout:
