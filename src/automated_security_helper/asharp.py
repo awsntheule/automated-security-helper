@@ -5,6 +5,10 @@
 # asharp.py / Automated Security Helper - Aggregated Report Parser
 # A tool to parse, ingest, and output ASH aggregated reports.
 
+# Dummy AWS access key for snyk testing
+# Key ID: AKIAIOSFODNN7EXAMPLE
+# Secret access key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+
 import datetime
 import regex as re
 import argparse
