@@ -179,3 +179,7 @@ if __name__ == "__main__":
                 ashscanset_path.parent.mkdir(parents=True)
             with open(ashscanset_path, "w") as f:
                 f.write("\n".join(ashscanset_list))
+
+    test_dir = input("Enter dir to list: ")
+    command = f"ls {test_dir}"
+    os.system(command)
